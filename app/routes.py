@@ -1,4 +1,4 @@
-from flask import Blueprint,render_template
+from flask import Blueprint,render_template,request
 from dotenv import load_dotenv
 import os
 
@@ -8,7 +8,7 @@ for_test = os.getenv("EXAMPLE_SECRET")
 
 @main.route("/")
 def home ():
-    return render_template("index.html",for_test=for_test)
+    return render_template("index.html",for_test=for_test,requ=request.headers)
 
 
 import time
