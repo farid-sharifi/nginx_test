@@ -8,7 +8,7 @@ for_test = os.getenv("EXAMPLE_SECRET")
 
 @main.route("/")
 def home ():
-    return render_template("index.html",for_test=for_test,requ=request.headers)
+    return render_template("index.html",for_test=for_test)
 
 
 import time
